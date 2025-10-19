@@ -12,7 +12,7 @@ const PricingOption = () => {
     return (
         <div>
             <h2 className='text-4xl font-bold my-10'>Get our Membership</h2>
-            <div className='w-8/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='flex flex-wrap gap-8'>
                 {
                     pricingData.map(pricing => <PricingCart key={pricing.id} pricing={pricing}></PricingCart>)
                 }

@@ -27,14 +27,14 @@ const link = routes.map((item) => (
         {
           open ? <X className="md:hidden"></X> :  <Menu className="md:hidden" />
         }
-        <h1 className="ml-5">MyNav</h1>
+        <h1 className="ml-5 text-2xl font-extrabold">fitTrak</h1>
       </div>
       <ul className="hidden md:flex ">
         {
             link
         }
       </ul>
-      <button>Sign in</button>
+      <button className="btn btn-primary">Sign in</button>
     </div>
   );
 };
