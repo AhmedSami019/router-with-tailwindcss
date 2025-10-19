@@ -13,7 +13,7 @@ const Navbar = () => {
 const [open, setOpen] = useState()
 
 const link = routes.map((item) => (
-          <Link item={item}></Link>
+          <Link key={item.id} item={item}></Link>
         ))
 
   return (
