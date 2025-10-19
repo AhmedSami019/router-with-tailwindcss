@@ -1,13 +1,35 @@
-import React from 'react';
+import { CircleCheckBig } from "lucide-react";
+import React from "react";
 
-const PricingCart = ({pricing}) => {
+const PricingCart = ({ pricing }) => {
+  console.log(pricing);
+  const { name, price, id, description, features } = pricing;
 
-    console.log(pricing);
-    return (
+  return (
+    <div className="card bg-base-300 shadow-sm">
+      <div className="card-body flex flex-col justify-between">
+        {/* <span className="badge badge-xs badge-warning">Most Popular</span> */}
         <div>
-            
+          <div className="flex justify-between">
+            <h2 className="text-2xl font-bold">{name}</h2>
+            <span className="text-lg">{price}</span>
+          </div>
+          <ul className="mt-6 flex flex-col gap-2 text-xs">
+            {features.map((feature) => (
+              <li className="flex gap-2 items-center">
+                {" "}
+                <CircleCheckBig size={10}></CircleCheckBig>
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
-    );
+        <div className="mt-6">
+          <button className="btn btn-primary btn-block ">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PricingCart;

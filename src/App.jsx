@@ -9,7 +9,7 @@ function App() {
     <header>
       <Navbar></Navbar>
     </header>
-    <main>
+    <main className='w-11/12 mx-auto'>
       <Suspense fallback={<span className="loading loading-infinity loading-xl"></span> }>
         <PricingOption></PricingOption>
       </Suspense>

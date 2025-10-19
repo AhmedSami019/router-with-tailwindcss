@@ -17,7 +17,7 @@ const link = routes.map((item) => (
         ))
 
   return (
-    <div className="flex justify-between text-lg mx-8 py-6">
+    <div className="w-11/12 mx-auto flex justify-between text-lg py-6">
       <div className="flex " onClick={()=> setOpen(!open)}>
         <ul className={`md:hidden absolute duration-100 ${open ? "top-12": "-top-40"} divide-y-2 divide-gray-600`}>
           {
