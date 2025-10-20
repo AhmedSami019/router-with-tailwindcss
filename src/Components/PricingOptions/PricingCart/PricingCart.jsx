@@ -2,20 +2,22 @@ import { CircleCheckBig } from "lucide-react";
 import React from "react";
 
 const PricingCart = ({ pricing }) => {
-  const { name, price, features } = pricing;
+  const { name, price, features, popular } = pricing;
 
   return (
     <div className="w-96 mx-auto card bg-base-300 shadow-sm">
       <div className="card-body flex flex-col justify-between">
-        {/* <span className="badge badge-xs badge-warning">Most Popular</span> */}
+        {popular && (
+          <span className="badge badge-xs badge-warning">Most Popular</span>
+        )}{" "}
         <div>
           <div className="flex justify-between">
             <h2 className="text-2xl font-bold">{name}</h2>
             <span className="text-lg">{price}</span>
           </div>
           <ul className="mt-6 flex flex-col gap-2 text-xs">
-            {features.map((feature) => (
-              <li className="flex gap-2 items-center">
+            {features.map((feature, index) => (
+              <li key={index} className="flex gap-2 items-center">
                 {" "}
                 <CircleCheckBig size={10} color="blue"></CircleCheckBig>
                 {feature}
